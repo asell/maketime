@@ -134,7 +134,13 @@ module.exports = function(app, passport) {
         });
     });
 
+// Send user data
+app.get('/user', isLoggedIn, function(req, res) {
+	res.send(req.user);
+});
 };
+
+
 
 // route middleware to make sure a user is logged in
 function isLoggedIn(req, res, next) {
