@@ -9,12 +9,20 @@ var createMoment = function(dateString){
 //returns -1 if x is before y in minutes, 0 if same, 1 if after
 var sortOnStartDate = function(firstEvent, secondEvent){
 	var firstDateTime = firstEvent.start.dateTime;
+	var firstDateEndTime = firstEvent.end.dateTime;
 	var secondDateTime = secondEvent.start.dateTime;
+	var secondDateEndTime = secondEvent.end.dateTime;
 	if(!firstDateTime){
-		firstDateTime = firstEvent.start.date;
+		firstDateTime = String(firstEvent.start.date);
+	}
+	if(!firstDateEndTime){
+		firstDateEndTime = String(firstEvent.end.date);
 	}
 	if(!secondDateTime){
 		secondDateTime = secondEvent.start.date;
+	}
+	if (!secondDateEndTime){
+		secondDateEndTime = secondEvent.end.date;
 	}
 	var x = createMoment(firstDateTime);
     var y = createMoment(secondDateTime);
@@ -43,30 +51,122 @@ var filterGoogleEvents = function(startByDateTime, endByDateTime, eList){
 
 /*************************************** code above here tested and works **********************/
 
+var taskToEvent = function(task){
+	var event = {
+		  	"kind": "calendar#event",
+  			"status": task.status,
+  			"summary": task.title, // title
+  			"description": task.descript, // description
+  			"location": 'Engineering', // location
+  			"start": {
+    			dateTime: task.date.actual,
+       			timeZone: 'America/New_York'
+  			},
+  			"end": {
+    			dateTime: moment(task.date.actual).add(task.duration, 'minutes').format(),
+       			timeZone: 'America/New_York'
+  			},
+		};
+	return event;
+};
+
+/*
+ * "tasks": [{
+			"id": 1,
+			"title": "My first task",
+			"type": "general",
+			"date": {
+				"set": {
+					"start": "9/13/14",
+					"end": "9/15/14"
+					},
+				"actual": "9/14/14 8:50 PM"
+				},
+			"length": "60",
+			"descript": "this is a description about the first task.",
+			"status": "scheduled"
+		},{
+			"id": 2,
+			"title": "My second task",
+			"type": "general",
+			"date": {
+				"set": {
+					"start": "9/15/14",
+					"end": "9/19/14"
+					},
+				"actual": "9/16/14 10:50 AM"
+				},
+			"length": "30",
+			"descript": "this is a description about the second task.",
+			"status": "scheduled"
+		}]
+ */
+
+
+
+var createSlot = function(startDateTime, endDateTime){
+	return {"start": startDateTime, "end": endDateTime};
+}
+
 //TODO: finish implementing, this is not necessary, more important to finish scheduleEventFirstAvailable
 //to finish, all we need to do is insert moment compares
 //calculates all available slots to schedule the task
 //filteredGoogleCalEventList must be sorted by startTime ascending, e.g. earliest events first
 /*
- * ourTask will be JSON object for 
+ * will return list of open time slots in JSON {start: dateTime, end: dateTime}
  */
 var calculateAvailableSlots = function(ourTask, filteredGoogleCalEventList){
-	var prevEvent = filteredGoogleCalEventList[0];
+	//if undefined, null, or empty
+	var availableSlots = [];
+	var slot = {};
+	//set our start by to be make of now, start by
+	var ourStartBy = createMoment(ourTask.date.set.start);
+	if (moment().isAfter(ourStartBy)){
+		ourStartBy = moment();
+	}
+	var ourEndBy = createMoment(ourTask.date.set.end);
+	//if no events in range, set slot to whole range
 	if (!filteredGoogleCalEventList || !filteredGoogleCalEventList.length){
-		ourEvent.start
+		slot = createSlot(ourStartBy.format(), ourEndBy.format());
+		availableSlots.push(slot);
+		return availableSlots;
 	}
-	//if we can fit between furthest in future of (now, ourEvent.startBy) and the first event in our eligible range
-	if ((!filteredGoogleCalEventList.length) || ((prevEvent.start.dateTime >= ourEvent.startBy) && ((prevEvent.start.dateTime - ourEvent.startBy) >= ourEvent.duration))){
-		event = {"kind": "calendar#event", "id": ourEvent.id, "start": ourEvent.startBy, "end": ourEvent.startBy + ourEvent.duration};
-		return event;
+	var pastEventEnd = ourStartBy;
+	//see if any slots before each event and the prior event, if so add to slot list
+	for (var i = 0; i < filteredGoogleCalEventList.length; i++){
+		var event = filteredGoogleCalEventList[i];
+		var eventStart = createMoment(event.start.dateTime);
+		var eventEnd = createMoment(event.end.dateTime);
+		//if we can fit our task between events, add the slot
+		if ((eventStart.diff(pastEventEnd, 'minutes') >= ourTask.length)){
+			slot = createSlot(pastEventEnd.format(), eventStart.format());
+			availableSlots.push(slot);
+		}
+		pastEventEnd = eventEnd;
 	}
+	
+	//see if any slots available at the end
+	if (ourEndBy.diff(pastEventEnd, 'minutes') >= ourTask.length){
+		slot = createSlot(pastEventEnd.format(), ourEndBy.format());
+		availableSlots.push(slot);
+	}
+	return availableSlots;
 };
+
+//uses new logic, testing currently, sets task actual and returns an event in google cal form to send
+var scheduleNewAlgorithm = function(ourTask, availableSlots){
+	var slot = availableSlots[0];
+	ourTask.actual = slot.start;
+	return taskToEvent(ourTask);
+}
 
 //returns the event with all fields properly filled out, throws error if can't create
 //schedules in earliest available slot after the startBy dateTime
 //filtered and sorted list
 var scheduleEventFirstAvailable = function(ourEvent, filteredSortedGoogleCalEventList){
 	var prevEvent = filteredGoogleCalEventList[0];
+	var prevEventStart = createMoment(prevEvent.start.dateTime);
+	var prevEventEnd = createMoment(prevEvent.end.dateTime);
 	var event;
 	//if we can fit before first item in range, or if the list is empty
 	//then set the time fields and return the event
