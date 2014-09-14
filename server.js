@@ -14,6 +14,10 @@ var session      = require('express-session');
 
 var configDB = require('./config/database.js');
 
+var task = require('./node_modules/google-calendar-task/lib/google-calendar-task.js');
+var sms = require('./node_modules/twilio_sms.js');
+var jobs = require('./node_modules/reminder-scheduling.js');
+
 // configuration ===============================================================
 mongoose.connect(configDB.url); // connect to our database
 
@@ -37,3 +41,6 @@ require('./app/routes.js')(app, passport); // load our routes and pass in our ap
 // launch ======================================================================
 app.listen(port);
 console.log('The magic happens on port ' + port);
+//task.addTask('ya29.gACVpLhHA6wxOc8HXLtFVByZya3P2Dlld2oSZW3Mq1ztQiqZVgmr8S5L');
+//sms.sendReminderSMS('New Event', '+18609186402');
+jobs.runJob();

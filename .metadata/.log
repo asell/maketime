@@ -446,3 +446,11 @@ java.net.UnknownHostException: dist.springsource.com: unknown error
 	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
 	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.ui.ide 4 4 2014-09-13 18:46:55.302
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 2 1 2014-09-13 18:46:55.552
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2014-09-13 18:46:55.552
+!MESSAGE The project description file (.project) for 'Cal' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.

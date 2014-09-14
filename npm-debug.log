@@ -1,4 +1,5 @@
 0 info it worked if it ends with ok
+<<<<<<< HEAD
 1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'aysnc' ]
 2 info using npm@1.3.24
 3 info using node@v0.10.25
@@ -67,3 +68,529 @@
 36 error npm -v 1.3.24
 37 error code E404
 38 verbose exit [ 1, true ]
+=======
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'sendgrid' ]
+2 info using npm@1.4.14
+3 info using node@v0.10.29
+4 warn package.json node-authentication@ No description
+5 warn package.json node-authentication@ No repository field.
+6 warn package.json node-authentication@ No README data
+7 warn package.json passport-local@0.1.6 No README data
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'sendgrid', null ]
+10 verbose cache add name=undefined spec="sendgrid" args=["sendgrid",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'sendgrid',
+11 verbose parsed url   path: 'sendgrid',
+11 verbose parsed url   href: 'sendgrid' }
+12 silly lockFile 0745833f-sendgrid sendgrid
+13 verbose lock sendgrid /Users/lexiselldorff/.npm/0745833f-sendgrid.lock
+14 silly lockFile 0745833f-sendgrid sendgrid
+15 silly lockFile 0745833f-sendgrid sendgrid
+16 verbose addNamed [ 'sendgrid', '' ]
+17 verbose addNamed [ null, '*' ]
+18 silly lockFile 779241b5-sendgrid sendgrid@
+19 verbose lock sendgrid@ /Users/lexiselldorff/.npm/779241b5-sendgrid.lock
+20 silly addNameRange { name: 'sendgrid', range: '*', hasData: false }
+21 verbose url raw sendgrid
+22 verbose url resolving [ 'https://registry.npmjs.org/', './sendgrid' ]
+23 verbose url resolved https://registry.npmjs.org/sendgrid
+24 info trying registry request attempt 1 at 00:26:18
+25 verbose etag "EOCJLDYYDLKY1JTQR9FV5D00B"
+26 http GET https://registry.npmjs.org/sendgrid
+27 http 304 https://registry.npmjs.org/sendgrid
+28 silly registry.get cb [ 304,
+28 silly registry.get   { date: 'Sun, 14 Sep 2014 04:26:18 GMT',
+28 silly registry.get     server: 'Apache',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     'last-modified': 'Sun, 14 Sep 2014 04:26:18 GMT',
+28 silly registry.get     'cache-control': 'max-age=60',
+28 silly registry.get     etag: '"EOCJLDYYDLKY1JTQR9FV5D00B"',
+28 silly registry.get     'x-served-by': 'cache-jfk1026-JFK',
+28 silly registry.get     'x-cache': 'MISS',
+28 silly registry.get     'x-cache-hits': '0',
+28 silly registry.get     'x-timer': 'S1410668778.074195,VS0,VE590',
+28 silly registry.get     vary: 'Accept',
+28 silly registry.get     'content-length': '0',
+28 silly registry.get     'keep-alive': 'timeout=10, max=50',
+28 silly registry.get     connection: 'Keep-Alive' } ]
+29 verbose etag sendgrid from cache
+30 silly addNameRange number 2 { name: 'sendgrid', range: '*', hasData: true }
+31 silly addNameRange versions [ 'sendgrid',
+31 silly addNameRange   [ '0.1.0-2',
+31 silly addNameRange     '0.2.0',
+31 silly addNameRange     '0.2.1',
+31 silly addNameRange     '0.2.2',
+31 silly addNameRange     '0.2.3',
+31 silly addNameRange     '0.2.4',
+31 silly addNameRange     '0.2.5',
+31 silly addNameRange     '0.2.6',
+31 silly addNameRange     '0.2.7',
+31 silly addNameRange     '0.2.8',
+31 silly addNameRange     '0.2.9',
+31 silly addNameRange     '0.2.10',
+31 silly addNameRange     '0.2.11',
+31 silly addNameRange     '0.3.0-rc.1.0',
+31 silly addNameRange     '0.2.12',
+31 silly addNameRange     '0.3.0-rc.1.1',
+31 silly addNameRange     '0.3.0-rc.1.2',
+31 silly addNameRange     '0.3.0-rc.1.3',
+31 silly addNameRange     '0.3.0-rc.1.4',
+31 silly addNameRange     '0.3.0-rc.1.5',
+31 silly addNameRange     '0.3.0-rc.1.6',
+31 silly addNameRange     '0.3.0-rc.1.7',
+31 silly addNameRange     '0.3.0-rc.1.8',
+31 silly addNameRange     '0.3.0',
+31 silly addNameRange     '0.3.1',
+31 silly addNameRange     '0.3.2',
+31 silly addNameRange     '0.4.0',
+31 silly addNameRange     '0.4.1',
+31 silly addNameRange     '0.4.2',
+31 silly addNameRange     '0.4.3',
+31 silly addNameRange     '0.4.4',
+31 silly addNameRange     '0.4.5',
+31 silly addNameRange     '0.4.6',
+31 silly addNameRange     '1.0.0-rc.1.0',
+31 silly addNameRange     '1.0.0-rc.1.1',
+31 silly addNameRange     '1.0.1',
+31 silly addNameRange     '1.0.2',
+31 silly addNameRange     '1.0.3',
+31 silly addNameRange     '1.0.4',
+31 silly addNameRange     '1.0.5',
+31 silly addNameRange     '1.1.0',
+31 silly addNameRange     '1.1.1',
+31 silly addNameRange     '1.2.0' ] ]
+32 verbose addNamed [ 'sendgrid', '1.2.0' ]
+33 verbose addNamed [ '1.2.0', '1.2.0' ]
+34 silly lockFile 2b903604-sendgrid-1-2-0 sendgrid@1.2.0
+35 verbose lock sendgrid@1.2.0 /Users/lexiselldorff/.npm/2b903604-sendgrid-1-2-0.lock
+36 silly lockFile 2b903604-sendgrid-1-2-0 sendgrid@1.2.0
+37 silly lockFile 2b903604-sendgrid-1-2-0 sendgrid@1.2.0
+38 silly lockFile 779241b5-sendgrid sendgrid@
+39 silly lockFile 779241b5-sendgrid sendgrid@
+40 silly resolved [ { author:
+40 silly resolved      { name: 'SendGrid',
+40 silly resolved        email: 'info@sendgrid.com',
+40 silly resolved        url: 'sendgrid.com' },
+40 silly resolved     contributors: [ [Object], [Object], [Object], [Object], [Object] ],
+40 silly resolved     name: 'sendgrid',
+40 silly resolved     description: 'Official SendGrid NodeJS library.',
+40 silly resolved     version: '1.2.0',
+40 silly resolved     homepage: 'http://sendgrid.com',
+40 silly resolved     repository:
+40 silly resolved      { type: 'git',
+40 silly resolved        url: 'git://github.com/sendgrid/sendgrid-nodejs.git' },
+40 silly resolved     engines: { node: '>= 0.4.7' },
+40 silly resolved     dependencies:
+40 silly resolved      { mime: '1.2.9',
+40 silly resolved        request: '2.40.0',
+40 silly resolved        lodash: '2.0.0',
+40 silly resolved        smtpapi: '1.0.3' },
+40 silly resolved     devDependencies:
+40 silly resolved      { dotenv: '0.0.2',
+40 silly resolved        mocha: '>= 0.9.0',
+40 silly resolved        chai: '>= 0.1.6',
+40 silly resolved        nock: '~0.16.0',
+40 silly resolved        sinon: '~1.6.0' },
+40 silly resolved     scripts:
+40 silly resolved      { test: 'mocha --grep \'#skip\' --invert',
+40 silly resolved        skipped: 'mocha --grep \'#skip\'' },
+40 silly resolved     optionalDependencies: {},
+40 silly resolved     gitHead: '6187554a946c087b97fcb51ab68b9213a975b378',
+40 silly resolved     bugs: { url: 'https://github.com/sendgrid/sendgrid-nodejs/issues' },
+40 silly resolved     _id: 'sendgrid@1.2.0',
+40 silly resolved     _shasum: '34a5f6dbfb582232b4b2dd7395213ac776105ea5',
+40 silly resolved     _from: 'sendgrid@',
+40 silly resolved     _npmVersion: '1.5.0-alpha-1',
+40 silly resolved     _npmUser: { name: 'nquinlan', email: 'nick@nicholasquinlan.com' },
+40 silly resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object] ],
+40 silly resolved     dist:
+40 silly resolved      { shasum: '34a5f6dbfb582232b4b2dd7395213ac776105ea5',
+40 silly resolved        tarball: 'http://registry.npmjs.org/sendgrid/-/sendgrid-1.2.0.tgz' },
+40 silly resolved     directories: {},
+40 silly resolved     _resolved: 'https://registry.npmjs.org/sendgrid/-/sendgrid-1.2.0.tgz',
+40 silly resolved     readme: 'ERROR: No README data found!' } ]
+41 info install sendgrid@1.2.0 into /Users/lexiselldorff/Documents/PennApps2014/MyCal
+42 info installOne sendgrid@1.2.0
+43 info /Users/lexiselldorff/Documents/PennApps2014/MyCal/node_modules/sendgrid unbuild
+44 verbose tar unpack /Users/lexiselldorff/.npm/sendgrid/1.2.0/package.tgz
+45 silly lockFile b01c1ddf-2014-MyCal-node-modules-sendgrid tar:///Users/lexiselldorff/Documents/PennApps2014/MyCal/node_modules/sendgrid
+46 verbose lock tar:///Users/lexiselldorff/Documents/PennApps2014/MyCal/node_modules/sendgrid /Users/lexiselldorff/.npm/b01c1ddf-2014-MyCal-node-modules-sendgrid.lock
+47 silly lockFile 6f36819f-f-npm-sendgrid-1-2-0-package-tgz tar:///Users/lexiselldorff/.npm/sendgrid/1.2.0/package.tgz
+48 verbose lock tar:///Users/lexiselldorff/.npm/sendgrid/1.2.0/package.tgz /Users/lexiselldorff/.npm/6f36819f-f-npm-sendgrid-1-2-0-package-tgz.lock
+49 silly gunzTarPerm modes [ '755', '644' ]
+50 silly gunzTarPerm extractEntry package.json
+51 silly gunzTarPerm extractEntry .npmignore
+52 silly gunzTarPerm extractEntry README.md
+53 silly gunzTarPerm extractEntry index.js
+54 silly gunzTarPerm extractEntry .env.example
+55 silly gunzTarPerm extractEntry .travis.yml
+56 silly gunzTarPerm extractEntry lib/email.js
+57 silly gunzTarPerm extractEntry lib/file_handler.js
+58 silly gunzTarPerm extractEntry lib/sendgrid.js
+59 silly gunzTarPerm extractEntry MIT.LICENSE
+60 silly gunzTarPerm extractEntry npm-shrinkwrap.json
+61 silly gunzTarPerm extractEntry test/index.test.js
+62 silly gunzTarPerm extractEntry test/test_helper.js
+63 silly gunzTarPerm extractEntry test/assets/logo.png
+64 silly gunzTarPerm extractEntry test/assets/secret.txt
+65 silly gunzTarPerm extractEntry test/integration/sendgrid.test.js
+66 silly gunzTarPerm extractEntry test/integration/.gitkeep
+67 silly gunzTarPerm extractEntry test/lib/email.test.js
+68 silly gunzTarPerm extractEntry test/lib/file_handler.test.js
+69 silly gunzTarPerm extractEntry test/lib/sendgrid.test.js
+70 silly gunzTarPerm extractEntry test/mocha.opts
+71 silly lockFile b01c1ddf-2014-MyCal-node-modules-sendgrid tar:///Users/lexiselldorff/Documents/PennApps2014/MyCal/node_modules/sendgrid
+72 silly lockFile b01c1ddf-2014-MyCal-node-modules-sendgrid tar:///Users/lexiselldorff/Documents/PennApps2014/MyCal/node_modules/sendgrid
+73 silly lockFile 6f36819f-f-npm-sendgrid-1-2-0-package-tgz tar:///Users/lexiselldorff/.npm/sendgrid/1.2.0/package.tgz
+74 silly lockFile 6f36819f-f-npm-sendgrid-1-2-0-package-tgz tar:///Users/lexiselldorff/.npm/sendgrid/1.2.0/package.tgz
+75 info preinstall sendgrid@1.2.0
+76 info shrinkwrap file "/Users/lexiselldorff/Documents/PennApps2014/MyCal/node_modules/sendgrid/npm-shrinkwrap.json"
+77 verbose readDependencies returned deps { mime: '1.2.9',
+77 verbose readDependencies returned deps   request: 'https://registry.npmjs.org/request/-/request-2.22.0.tgz',
+77 verbose readDependencies returned deps   lodash: 'https://registry.npmjs.org/lodash/-/lodash-2.0.0.tgz',
+77 verbose readDependencies returned deps   smtpapi: 'https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz' }
+78 verbose readDependencies: using existing wrap [ '/Users/lexiselldorff/Documents/PennApps2014/MyCal/node_modules/sendgrid',
+78 verbose readDependencies: using existing wrap   { mime: { version: '1.2.9', from: 'mime@1.2.9' },
+78 verbose readDependencies: using existing wrap     request:
+78 verbose readDependencies: using existing wrap      { version: '2.22.0',
+78 verbose readDependencies: using existing wrap        from: 'request@2.22.0',
+78 verbose readDependencies: using existing wrap        resolved: 'https://registry.npmjs.org/request/-/request-2.22.0.tgz',
+78 verbose readDependencies: using existing wrap        dependencies: [Object] },
+78 verbose readDependencies: using existing wrap     lodash:
+78 verbose readDependencies: using existing wrap      { version: '2.0.0',
+78 verbose readDependencies: using existing wrap        from: 'lodash@2.0.0',
+78 verbose readDependencies: using existing wrap        resolved: 'https://registry.npmjs.org/lodash/-/lodash-2.0.0.tgz' },
+78 verbose readDependencies: using existing wrap     smtpapi:
+78 verbose readDependencies: using existing wrap      { version: '1.0.3',
+78 verbose readDependencies: using existing wrap        from: 'smtpapi@1.0.3',
+78 verbose readDependencies: using existing wrap        resolved: 'https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz' } } ]
+79 verbose from wrap [ 'mime', { version: '1.2.9', from: 'mime@1.2.9' } ]
+80 verbose from wrap [ 'request',
+80 verbose from wrap   { version: '2.22.0',
+80 verbose from wrap     from: 'request@2.22.0',
+80 verbose from wrap     resolved: 'https://registry.npmjs.org/request/-/request-2.22.0.tgz',
+80 verbose from wrap     dependencies:
+80 verbose from wrap      { qs: [Object],
+80 verbose from wrap        'json-stringify-safe': [Object],
+80 verbose from wrap        'forever-agent': [Object],
+80 verbose from wrap        'tunnel-agent': [Object],
+80 verbose from wrap        'http-signature': [Object],
+80 verbose from wrap        hawk: [Object],
+80 verbose from wrap        'aws-sign': [Object],
+80 verbose from wrap        'oauth-sign': [Object],
+80 verbose from wrap        'cookie-jar': [Object],
+80 verbose from wrap        'node-uuid': [Object],
+80 verbose from wrap        'form-data': [Object] } } ]
+81 verbose from wrap [ 'lodash',
+81 verbose from wrap   { version: '2.0.0',
+81 verbose from wrap     from: 'lodash@2.0.0',
+81 verbose from wrap     resolved: 'https://registry.npmjs.org/lodash/-/lodash-2.0.0.tgz' } ]
+82 verbose from wrap [ 'smtpapi',
+82 verbose from wrap   { version: '1.0.3',
+82 verbose from wrap     from: 'smtpapi@1.0.3',
+82 verbose from wrap     resolved: 'https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz' } ]
+83 verbose readDependencies returned deps { mime: '1.2.9',
+83 verbose readDependencies returned deps   request: 'https://registry.npmjs.org/request/-/request-2.22.0.tgz',
+83 verbose readDependencies returned deps   lodash: 'https://registry.npmjs.org/lodash/-/lodash-2.0.0.tgz',
+83 verbose readDependencies returned deps   smtpapi: 'https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz' }
+84 verbose cache add [ 'mime@1.2.9', null ]
+85 verbose cache add name=undefined spec="mime@1.2.9" args=["mime@1.2.9",null]
+86 verbose parsed url { protocol: null,
+86 verbose parsed url   slashes: null,
+86 verbose parsed url   auth: null,
+86 verbose parsed url   host: null,
+86 verbose parsed url   port: null,
+86 verbose parsed url   hostname: null,
+86 verbose parsed url   hash: null,
+86 verbose parsed url   search: null,
+86 verbose parsed url   query: null,
+86 verbose parsed url   pathname: 'mime@1.2.9',
+86 verbose parsed url   path: 'mime@1.2.9',
+86 verbose parsed url   href: 'mime@1.2.9' }
+87 verbose cache add [ 'request@https://registry.npmjs.org/request/-/request-2.22.0.tgz',
+87 verbose cache add   null ]
+88 verbose cache add name=undefined spec="request@https://registry.npmjs.org/request/-/request-2.22.0.tgz" args=["request@https://registry.npmjs.org/request/-/request-2.22.0.tgz",null]
+89 verbose parsed url { protocol: null,
+89 verbose parsed url   slashes: null,
+89 verbose parsed url   auth: null,
+89 verbose parsed url   host: null,
+89 verbose parsed url   port: null,
+89 verbose parsed url   hostname: null,
+89 verbose parsed url   hash: null,
+89 verbose parsed url   search: null,
+89 verbose parsed url   query: null,
+89 verbose parsed url   pathname: 'request@https://registry.npmjs.org/request/-/request-2.22.0.tgz',
+89 verbose parsed url   path: 'request@https://registry.npmjs.org/request/-/request-2.22.0.tgz',
+89 verbose parsed url   href: 'request@https://registry.npmjs.org/request/-/request-2.22.0.tgz' }
+90 verbose cache add name="mime" spec="1.2.9" args=["mime","1.2.9"]
+91 verbose parsed url { protocol: null,
+91 verbose parsed url   slashes: null,
+91 verbose parsed url   auth: null,
+91 verbose parsed url   host: null,
+91 verbose parsed url   port: null,
+91 verbose parsed url   hostname: null,
+91 verbose parsed url   hash: null,
+91 verbose parsed url   search: null,
+91 verbose parsed url   query: null,
+91 verbose parsed url   pathname: '1.2.9',
+91 verbose parsed url   path: '1.2.9',
+91 verbose parsed url   href: '1.2.9' }
+92 verbose addNamed [ 'mime', '1.2.9' ]
+93 verbose addNamed [ '1.2.9', '1.2.9' ]
+94 silly lockFile 24648bbc-mime-1-2-9 mime@1.2.9
+95 verbose lock mime@1.2.9 /Users/lexiselldorff/.npm/24648bbc-mime-1-2-9.lock
+96 verbose cache add name="request" spec="https://registry.npmjs.org/request/-/request-2.22.0.tgz" args=["request","https://registry.npmjs.org/request/-/request-2.22.0.tgz"]
+97 verbose parsed url { protocol: 'https:',
+97 verbose parsed url   slashes: true,
+97 verbose parsed url   auth: null,
+97 verbose parsed url   host: 'registry.npmjs.org',
+97 verbose parsed url   port: null,
+97 verbose parsed url   hostname: 'registry.npmjs.org',
+97 verbose parsed url   hash: null,
+97 verbose parsed url   search: null,
+97 verbose parsed url   query: null,
+97 verbose parsed url   pathname: '/request/-/request-2.22.0.tgz',
+97 verbose parsed url   path: '/request/-/request-2.22.0.tgz',
+97 verbose parsed url   href: 'https://registry.npmjs.org/request/-/request-2.22.0.tgz' }
+98 silly lockFile 11bcd40c-s-org-request-request-2-22-0-tgz https://registry.npmjs.org/request/-/request-2.22.0.tgz
+99 verbose lock https://registry.npmjs.org/request/-/request-2.22.0.tgz /Users/lexiselldorff/.npm/11bcd40c-s-org-request-request-2-22-0-tgz.lock
+100 verbose cache add [ 'lodash@https://registry.npmjs.org/lodash/-/lodash-2.0.0.tgz',
+100 verbose cache add   null ]
+101 verbose cache add name=undefined spec="lodash@https://registry.npmjs.org/lodash/-/lodash-2.0.0.tgz" args=["lodash@https://registry.npmjs.org/lodash/-/lodash-2.0.0.tgz",null]
+102 verbose parsed url { protocol: null,
+102 verbose parsed url   slashes: null,
+102 verbose parsed url   auth: null,
+102 verbose parsed url   host: null,
+102 verbose parsed url   port: null,
+102 verbose parsed url   hostname: null,
+102 verbose parsed url   hash: null,
+102 verbose parsed url   search: null,
+102 verbose parsed url   query: null,
+102 verbose parsed url   pathname: 'lodash@https://registry.npmjs.org/lodash/-/lodash-2.0.0.tgz',
+102 verbose parsed url   path: 'lodash@https://registry.npmjs.org/lodash/-/lodash-2.0.0.tgz',
+102 verbose parsed url   href: 'lodash@https://registry.npmjs.org/lodash/-/lodash-2.0.0.tgz' }
+103 verbose cache add [ 'smtpapi@https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz',
+103 verbose cache add   null ]
+104 verbose cache add name=undefined spec="smtpapi@https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz" args=["smtpapi@https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz",null]
+105 verbose parsed url { protocol: null,
+105 verbose parsed url   slashes: null,
+105 verbose parsed url   auth: null,
+105 verbose parsed url   host: null,
+105 verbose parsed url   port: null,
+105 verbose parsed url   hostname: null,
+105 verbose parsed url   hash: null,
+105 verbose parsed url   search: null,
+105 verbose parsed url   query: null,
+105 verbose parsed url   pathname: 'smtpapi@https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz',
+105 verbose parsed url   path: 'smtpapi@https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz',
+105 verbose parsed url   href: 'smtpapi@https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz' }
+106 verbose cache add name="lodash" spec="https://registry.npmjs.org/lodash/-/lodash-2.0.0.tgz" args=["lodash","https://registry.npmjs.org/lodash/-/lodash-2.0.0.tgz"]
+107 verbose parsed url { protocol: 'https:',
+107 verbose parsed url   slashes: true,
+107 verbose parsed url   auth: null,
+107 verbose parsed url   host: 'registry.npmjs.org',
+107 verbose parsed url   port: null,
+107 verbose parsed url   hostname: 'registry.npmjs.org',
+107 verbose parsed url   hash: null,
+107 verbose parsed url   search: null,
+107 verbose parsed url   query: null,
+107 verbose parsed url   pathname: '/lodash/-/lodash-2.0.0.tgz',
+107 verbose parsed url   path: '/lodash/-/lodash-2.0.0.tgz',
+107 verbose parsed url   href: 'https://registry.npmjs.org/lodash/-/lodash-2.0.0.tgz' }
+108 silly lockFile 2e862cf0-pmjs-org-lodash-lodash-2-0-0-tgz https://registry.npmjs.org/lodash/-/lodash-2.0.0.tgz
+109 verbose lock https://registry.npmjs.org/lodash/-/lodash-2.0.0.tgz /Users/lexiselldorff/.npm/2e862cf0-pmjs-org-lodash-lodash-2-0-0-tgz.lock
+110 verbose cache add name="smtpapi" spec="https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz" args=["smtpapi","https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz"]
+111 verbose parsed url { protocol: 'https:',
+111 verbose parsed url   slashes: true,
+111 verbose parsed url   auth: null,
+111 verbose parsed url   host: 'registry.npmjs.org',
+111 verbose parsed url   port: null,
+111 verbose parsed url   hostname: 'registry.npmjs.org',
+111 verbose parsed url   hash: null,
+111 verbose parsed url   search: null,
+111 verbose parsed url   query: null,
+111 verbose parsed url   pathname: '/smtpapi/-/smtpapi-1.0.3.tgz',
+111 verbose parsed url   path: '/smtpapi/-/smtpapi-1.0.3.tgz',
+111 verbose parsed url   href: 'https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz' }
+112 silly lockFile d342e885-js-org-smtpapi-smtpapi-1-0-3-tgz https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz
+113 verbose lock https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz /Users/lexiselldorff/.npm/d342e885-js-org-smtpapi-smtpapi-1-0-3-tgz.lock
+114 verbose addRemoteTarball [ 'https://registry.npmjs.org/request/-/request-2.22.0.tgz',
+114 verbose addRemoteTarball   null ]
+115 verbose addRemoteTarball [ 'https://registry.npmjs.org/lodash/-/lodash-2.0.0.tgz', null ]
+116 verbose addRemoteTarball [ 'https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz',
+116 verbose addRemoteTarball   null ]
+117 verbose url raw mime
+118 verbose url resolving [ 'https://registry.npmjs.org/', './mime' ]
+119 verbose url resolved https://registry.npmjs.org/mime
+120 info trying registry request attempt 1 at 00:26:19
+121 verbose etag "1P0GC0UTO1T6FPQSDVW3F2XXT"
+122 http GET https://registry.npmjs.org/mime
+123 info retry fetch attempt 1 at 00:26:19
+124 verbose fetch to= /var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/lodash/-/lodash-2.0.0.tgz
+125 info retry fetch attempt 1 at 00:26:19
+126 verbose fetch to= /var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz
+127 info retry fetch attempt 1 at 00:26:19
+128 verbose fetch to= /var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/request/-/request-2.22.0.tgz
+129 http GET https://registry.npmjs.org/lodash/-/lodash-2.0.0.tgz
+130 http GET https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz
+131 http GET https://registry.npmjs.org/request/-/request-2.22.0.tgz
+132 http 304 https://registry.npmjs.org/mime
+133 silly registry.get cb [ 304,
+133 silly registry.get   { date: 'Sun, 14 Sep 2014 04:26:19 GMT',
+133 silly registry.get     server: 'Apache',
+133 silly registry.get     via: '1.1 varnish',
+133 silly registry.get     'last-modified': 'Sun, 14 Sep 2014 04:26:19 GMT',
+133 silly registry.get     'cache-control': 'max-age=60',
+133 silly registry.get     etag: '"1P0GC0UTO1T6FPQSDVW3F2XXT"',
+133 silly registry.get     'x-served-by': 'cache-jfk1028-JFK',
+133 silly registry.get     'x-cache': 'HIT',
+133 silly registry.get     'x-cache-hits': '1',
+133 silly registry.get     'x-timer': 'S1410668779.057753,VS0,VE0',
+133 silly registry.get     vary: 'Accept',
+133 silly registry.get     'content-length': '0',
+133 silly registry.get     'keep-alive': 'timeout=10, max=50',
+133 silly registry.get     connection: 'Keep-Alive' } ]
+134 verbose etag mime from cache
+135 http 200 https://registry.npmjs.org/lodash/-/lodash-2.0.0.tgz
+136 http 200 https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz
+137 http 200 https://registry.npmjs.org/request/-/request-2.22.0.tgz
+138 verbose tar unpack /var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz
+139 silly lockFile df9e2729-smtpapi-smtpapi-1-0-3-tgz-unpack tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz-unpack
+140 verbose lock tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz-unpack /Users/lexiselldorff/.npm/df9e2729-smtpapi-smtpapi-1-0-3-tgz-unpack.lock
+141 silly lockFile 2eb303b3-js-org-smtpapi-smtpapi-1-0-3-tgz tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz
+142 verbose lock tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz /Users/lexiselldorff/.npm/2eb303b3-js-org-smtpapi-smtpapi-1-0-3-tgz.lock
+143 silly gunzTarPerm modes [ '755', '644' ]
+144 silly gunzTarPerm extractEntry package.json
+145 silly gunzTarPerm extractEntry .npmignore
+146 silly gunzTarPerm extractEntry README.md
+147 silly gunzTarPerm extractEntry .travis.yml
+148 silly gunzTarPerm extractEntry lib/main.js
+149 silly gunzTarPerm extractEntry test/main.js
+150 silly gunzTarPerm extractEntry test/smtpapi_test_strings.json
+151 silly lockFile 24648bbc-mime-1-2-9 mime@1.2.9
+152 silly lockFile 24648bbc-mime-1-2-9 mime@1.2.9
+153 verbose tar unpack /var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/request/-/request-2.22.0.tgz
+154 silly lockFile 32d09bd0-equest-request-2-22-0-tgz-unpack tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/request/-/request-2.22.0.tgz-unpack
+155 verbose lock tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/request/-/request-2.22.0.tgz-unpack /Users/lexiselldorff/.npm/32d09bd0-equest-request-2-22-0-tgz-unpack.lock
+156 silly lockFile 85a8718c-s-org-request-request-2-22-0-tgz tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/request/-/request-2.22.0.tgz
+157 verbose lock tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/request/-/request-2.22.0.tgz /Users/lexiselldorff/.npm/85a8718c-s-org-request-request-2-22-0-tgz.lock
+158 verbose tar unpack /var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/lodash/-/lodash-2.0.0.tgz
+159 silly lockFile e3438833-g-lodash-lodash-2-0-0-tgz-unpack tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/lodash/-/lodash-2.0.0.tgz-unpack
+160 verbose lock tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/lodash/-/lodash-2.0.0.tgz-unpack /Users/lexiselldorff/.npm/e3438833-g-lodash-lodash-2-0-0-tgz-unpack.lock
+161 silly lockFile 9f76f265-pmjs-org-lodash-lodash-2-0-0-tgz tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/lodash/-/lodash-2.0.0.tgz
+162 verbose lock tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/lodash/-/lodash-2.0.0.tgz /Users/lexiselldorff/.npm/9f76f265-pmjs-org-lodash-lodash-2-0-0-tgz.lock
+163 silly gunzTarPerm modes [ '755', '644' ]
+164 silly lockFile df9e2729-smtpapi-smtpapi-1-0-3-tgz-unpack tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz-unpack
+165 silly lockFile df9e2729-smtpapi-smtpapi-1-0-3-tgz-unpack tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz-unpack
+166 silly lockFile 2eb303b3-js-org-smtpapi-smtpapi-1-0-3-tgz tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz
+167 silly lockFile 2eb303b3-js-org-smtpapi-smtpapi-1-0-3-tgz tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz
+168 silly gunzTarPerm extractEntry package.json
+169 silly gunzTarPerm modes [ '755', '644' ]
+170 silly gunzTarPerm extractEntry package.json
+171 silly gunzTarPerm extractEntry README.md
+172 silly gunzTarPerm extractEntry LICENSE
+173 silly gunzTarPerm extractEntry README.md
+174 silly gunzTarPerm extractEntry lodash.js
+175 silly gunzTarPerm extractEntry index.js
+176 silly gunzTarPerm extractEntry LICENSE.txt
+177 silly gunzTarPerm extractEntry tests/test-httpModule.js
+178 silly gunzTarPerm extractEntry tests/test-headers.js
+179 silly gunzTarPerm extractEntry dist/lodash.compat.js
+180 silly gunzTarPerm extractEntry dist/lodash.compat.min.js
+181 silly gunzTarPerm extractEntry tests/test-http-signature.js
+182 silly gunzTarPerm extractEntry tests/run.js
+183 silly lockFile d342e885-js-org-smtpapi-smtpapi-1-0-3-tgz https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz
+184 silly lockFile d342e885-js-org-smtpapi-smtpapi-1-0-3-tgz https://registry.npmjs.org/smtpapi/-/smtpapi-1.0.3.tgz
+185 silly gunzTarPerm extractEntry tests/test-hawk.js
+186 silly gunzTarPerm extractEntry tests/test-https.js
+187 silly gunzTarPerm extractEntry tests/test-localAddress.js
+188 silly gunzTarPerm extractEntry tests/test-oauth.js
+189 silly gunzTarPerm extractEntry tests/test-onelineproxy.js
+190 silly gunzTarPerm extractEntry tests/test-params.js
+191 silly gunzTarPerm extractEntry tests/test-form.js
+192 silly gunzTarPerm extractEntry tests/test-piped-redirect.js
+193 silly gunzTarPerm extractEntry tests/test-follow-all.js
+194 silly gunzTarPerm extractEntry tests/test-pipes.js
+195 silly gunzTarPerm extractEntry tests/test-follow-all-303.js
+196 silly gunzTarPerm extractEntry tests/test-pool.js
+197 silly gunzTarPerm extractEntry tests/test-errors.js
+198 silly gunzTarPerm extractEntry tests/test-protocol-changing-redirect.js
+199 silly gunzTarPerm extractEntry tests/test-emptyBody.js
+200 silly gunzTarPerm extractEntry tests/test-proxy.js
+201 silly gunzTarPerm extractEntry tests/test-digest-auth.js
+202 silly gunzTarPerm extractEntry tests/test-qs.js
+203 silly gunzTarPerm extractEntry tests/test-defaults.js
+204 silly gunzTarPerm extractEntry tests/test-redirect.js
+205 silly gunzTarPerm extractEntry tests/test-body.js
+206 silly gunzTarPerm extractEntry tests/test-s3.js
+207 silly gunzTarPerm extractEntry tests/test-basic-auth.js
+208 silly gunzTarPerm extractEntry tests/test-timeout.js
+209 silly gunzTarPerm extractEntry tests/test-agentOptions.js
+210 silly gunzTarPerm extractEntry tests/test-toJSON.js
+211 silly gunzTarPerm extractEntry tests/server.js
+212 silly gunzTarPerm extractEntry tests/test-tunnel.js
+213 silly gunzTarPerm extractEntry tests/test-https-strict.js
+214 silly gunzTarPerm extractEntry tests/squid.conf
+215 silly gunzTarPerm extractEntry tests/ssl/ca/server.js
+216 silly gunzTarPerm extractEntry tests/ssl/ca/ca.srl
+217 silly gunzTarPerm extractEntry tests/ssl/ca/ca.crt
+218 silly gunzTarPerm extractEntry tests/ssl/ca/ca.csr
+219 silly gunzTarPerm extractEntry tests/ssl/ca/ca.key
+220 silly gunzTarPerm extractEntry tests/ssl/ca/ca.crl
+221 silly gunzTarPerm extractEntry tests/ssl/ca/server.cnf
+222 silly gunzTarPerm extractEntry tests/ssl/ca/server.crt
+223 silly gunzTarPerm extractEntry tests/ssl/ca/server.csr
+224 silly gunzTarPerm extractEntry tests/ssl/ca/ca.cnf
+225 silly gunzTarPerm extractEntry tests/ssl/ca/server.key
+226 silly gunzTarPerm extractEntry tests/ssl/npm-ca.crt
+227 silly gunzTarPerm extractEntry tests/ssl/test.crt
+228 silly gunzTarPerm extractEntry tests/ssl/test.key
+229 silly gunzTarPerm extractEntry tests/googledoodle.jpg
+230 silly gunzTarPerm extractEntry tests/unicycle.jpg
+231 silly gunzTarPerm extractEntry dist/lodash.js
+232 silly gunzTarPerm extractEntry dist/lodash.min.js
+233 silly gunzTarPerm extractEntry dist/lodash.underscore.js
+234 silly gunzTarPerm extractEntry dist/lodash.underscore.min.js
+235 silly lockFile 32d09bd0-equest-request-2-22-0-tgz-unpack tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/request/-/request-2.22.0.tgz-unpack
+236 silly lockFile 32d09bd0-equest-request-2-22-0-tgz-unpack tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/request/-/request-2.22.0.tgz-unpack
+237 silly lockFile 85a8718c-s-org-request-request-2-22-0-tgz tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/request/-/request-2.22.0.tgz
+238 silly lockFile 85a8718c-s-org-request-request-2-22-0-tgz tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/request/-/request-2.22.0.tgz
+239 silly lockFile e3438833-g-lodash-lodash-2-0-0-tgz-unpack tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/lodash/-/lodash-2.0.0.tgz-unpack
+240 silly lockFile e3438833-g-lodash-lodash-2-0-0-tgz-unpack tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/lodash/-/lodash-2.0.0.tgz-unpack
+241 silly lockFile 9f76f265-pmjs-org-lodash-lodash-2-0-0-tgz tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/lodash/-/lodash-2.0.0.tgz
+242 silly lockFile 9f76f265-pmjs-org-lodash-lodash-2-0-0-tgz tar:///var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-4601-OYdqvopZ/registry.npmjs.org/lodash/-/lodash-2.0.0.tgz
+243 silly lockFile 11bcd40c-s-org-request-request-2-22-0-tgz https://registry.npmjs.org/request/-/request-2.22.0.tgz
+244 silly lockFile 11bcd40c-s-org-request-request-2-22-0-tgz https://registry.npmjs.org/request/-/request-2.22.0.tgz
+245 verbose about to build /Users/lexiselldorff/Documents/PennApps2014/MyCal/node_modules/sendgrid
+246 info /Users/lexiselldorff/Documents/PennApps2014/MyCal/node_modules/sendgrid unbuild
+247 info preuninstall sendgrid@1.2.0
+248 info uninstall sendgrid@1.2.0
+249 verbose true,/Users/lexiselldorff/Documents/PennApps2014/MyCal/node_modules,/Users/lexiselldorff/Documents/PennApps2014/MyCal/node_modules unbuild sendgrid@1.2.0
+250 info postuninstall sendgrid@1.2.0
+251 error Error: EACCES, open '/Users/lexiselldorff/.npm/request/2.22.0/package/package.json'
+251 error  { [Error: EACCES, open '/Users/lexiselldorff/.npm/request/2.22.0/package/package.json']
+251 error   errno: 3,
+251 error   code: 'EACCES',
+251 error   path: '/Users/lexiselldorff/.npm/request/2.22.0/package/package.json',
+251 error   parent: 'sendgrid' }
+252 error Please try running this command again as root/Administrator.
+253 error System Darwin 13.3.0
+254 error command "node" "/usr/local/bin/npm" "install" "sendgrid"
+255 error cwd /Users/lexiselldorff/Documents/PennApps2014/MyCal
+256 error node -v v0.10.29
+257 error npm -v 1.4.14
+258 error path /Users/lexiselldorff/.npm/request/2.22.0/package/package.json
+259 error code EACCES
+260 error errno 3
+261 error stack Error: EACCES, open '/Users/lexiselldorff/.npm/request/2.22.0/package/package.json'
+262 verbose exit [ 3, true ]
+>>>>>>> test_google_calendar_events

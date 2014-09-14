@@ -14,6 +14,7 @@ module.exports = function(app, passport) {
 		res.render('profile.ejs', {
 			user : req.user 
 		});
+
 	});
 	
 // LOGOUT ==============================
@@ -41,8 +42,16 @@ module.exports = function(app, passport) {
 		res.render('signup.ejs', { message: req.flash('signupMessage') });
 	});
 
-// GOOGLE ROUTES =======================
-    app.get('/auth/google', passport.authenticate('google', { scope : ['profile', 'email'] }));
+
+	// =====================================
+	// GOOGLE ROUTES =======================
+	// =====================================
+	// send to google to do the authentication
+	// profile gets us their basic information including their name
+	// email gets their emails
+    app.get('/auth/google', passport.authenticate('google', { scope : ['profile', 'email' , 'https://www.googleapis.com/auth/calendar' ] }));
+
+    // the callback after google has authenticated the user
     app.get('/auth/google/callback',
             passport.authenticate('google', {
                     successRedirect : '/',
@@ -59,10 +68,13 @@ module.exports = function(app, passport) {
 			failureFlash : true
 		}));
 
-// google ---------------------------------
-		app.get('/connect/google', passport.authorize('google', { scope : ['profile', 'email'] }));
-	
-app.get('/connect/google/callback',
+	// google ---------------------------------
+
+		// send to google to do the authentication
+		app.get('/connect/google', passport.authorize('google', { scope : ['profile', 'email',  , 'https://www.googleapis.com/auth/calendar' ] }));
+
+		// the callback after google has authorized the user
+		app.get('/connect/google/callback',
 			passport.authorize('google', {
 				successRedirect : '/profile',
 				failureRedirect : '/'
