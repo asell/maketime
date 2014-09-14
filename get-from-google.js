@@ -2,15 +2,44 @@
  * 
  */
 
+var sortFunc = function(firstEvent, secondEvent){
+	var x = moment(firstEvent.start.dateTime);
+    var y = moment(secondEvent.start.dateTime);
+    return (x.diff(y, 'minutes') < 0 ? -1 : x.diff(y, 'minutes') == 0 ? 0 : 1)
+}
 
-var filterGoogleEvents = function(startByDateTime, endByDateTime, googleCalEventList){
+var f = function(eList){
+	var ret = [];
+	for (e in eList){
+		if (eList[e].start.dateTime){
+			ret.push(eList[e]);
+		}
+	}
+	return ret;
+}
+
+//TODO: compare dates using moment compares inline
+var filterGoogleEvents = function(startByDateTime, endByDateTime, eList){
 	var filteredEventList = [];
-	for (event in googleCalEventList){
-		if ((event.start.dateTime >= startByDateTime) && (event.start.dateTime <= endByDateTime) || ((event.end.dateTime >= startByTime) && (event.end.dateTime <= endByTime))){
-			filteredEventList.push(event);
+	for (event in eList){
+		if (((moment(eList[event].start.dateTime).diff(moment(startByDateTime), 'minutes') >= 0) && (moment(eList[event].start.dateTime).diff(moment(endByDateTime), 'minutes') <= 0)) || ((moment(eList[event].end.dateTime).diff(moment(startByDateTime), 'minutes') >= 0) && (moment(eList[event].end.dateTime).diff(moment(endByTime), 'minutes') <= 0))){
+			filteredEventList.push(eList[event]);
 		}
 	}
 	return filteredEventList;
+};
+
+/*************************************** code above here tested and works **********************/
+
+//TODO: finish implementing, this is not necessary, more important to finish scheduleEventFirstAvailable
+//to finish, all we need to do is insert moment compares
+//calculates all available slots to schedule the task
+var calculateAvailableSlots = function(ourEvent, filteredGoogleCalEventList){
+	var prevEvent = filteredGoogleCalEventList[0];
+	if ((filteredGoogleCalEventList.length <= 0) || ((prevEvent.start.dateTime >= ourEvent.startBy) && ((prevEvent.start.dateTime - ourEvent.startBy) >= ourEvent.duration))){
+		event = {"kind": "calendar#event", "id": ourEvent.id, "start": ourEvent.startBy, "end": ourEvent.startBy + ourEvent.duration};
+		return event;
+	}
 };
 
 //returns the event with all fields properly filled out, throws error if can't create
@@ -59,5 +88,6 @@ var scheduleEventFirstAvailable = function(ourEvent, filteredGoogleCalEventList)
 		event = {"kind": "calendar#event", "id": ourEvent.id, "start": prevEvent.end, "end": prevEvent.end + ourEvent.duration};
 		return event;
 	}
+	//can't add it
 	return null;
 };
