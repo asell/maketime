@@ -6,9 +6,9 @@ module.exports = function(app, passport) {
 	// =====================================
 	// HOME PAGE (with login links) ========
 	// =====================================
-	app.get('/', function(req, res) {
-		res.render('index.ejs'); // load the index.ejs file
-	});
+//	app.get('/', function(req, res) {
+//		res.render('index.ejs'); // load the index.ejs file
+//	});
 
 	// process the signup form
 	app.post('/signup', passport.authenticate('local-signup', {
@@ -135,8 +135,17 @@ module.exports = function(app, passport) {
     });
 
 // Send user data
-app.get('/user', isLoggedIn, function(req, res) {
+app.get('/api/user', isLoggedIn, function(req, res) {
 	res.send(req.user);
+});
+
+app.put('/api/user', function(req, res) {
+	var user = req.user;
+	
+	user = _.extend(user, req.body);
+	user.save(function(err) {
+		res.jsonp(user);
+	});
 });
 };
 
