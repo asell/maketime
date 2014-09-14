@@ -5,10 +5,8 @@
 		  <tr ng-repeat="task in user.task">
 			<td>{{task.title}}</td>
 			<td>{{task.type}}</td>
-			<td>{{task.date.actual}}</td>
+			<td>{{task.dateActual}}</td>
 			<td>{{task.length}} Mins.</td>
-			<td>{{task.descript}}</td>
-			<td>{{task.status}}</td>
 			<td><a href="#/tasks-delete/{{task._id}}"><span>Delete</span></a></td>
 		  </tr>
 		</table>

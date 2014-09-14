@@ -1,10 +1,15 @@
+<div class="contianer">
+<div class="jumbotron">
 <form name="taskForm" method="post">
   <div class="form-group">
-  <fieldset>
-    <input id="taskTitle" type="text" placeholder="title" class="form-horizontal" ng-model="Task.title">{{Task.title}}
-  <input type="text" ng-model="Task.type">
-    <a name="saveBtn" ng-click="save()">Save</a>
-  </fieldset>
+    <input id="taskTitle" type="text" placeholder="title" class="form-control form-horizontal" ng-model="Task.title">{{Task.titlewi}}
+    <input type="text" placeholder="type" ng-model="Task.type" class="form-control">
+    <input type="datetime" ng-model="Task.dateStart" placeholder="dateStart" class="datetime form-control">
+    <input type="datetime" ng-model="Task.dateEnd" placeholder="dateEnd" class="form-control">
+    <input type="text" ng-model="Task.dateActual" placeholder="dateActual" class="form-control">
+    <input type="text" ng-model="Task.length" placeholder="duration" class="form-control">
+    <button name="saveBtn" ng-click="save()">Save</button>
   </div>
 </form>	
-{{Task}}
+</div>
+</div>

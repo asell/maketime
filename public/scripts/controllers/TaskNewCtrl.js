@@ -7,7 +7,7 @@ angular.module('TaskNewCtrl', ['ngRoute'])
         }
         $scope.User.task.push($scope.Task);
         $scope.User.$update(function(){
-	 // $location.path('/');
+	 $location.path('/task');
 	})
     };
 

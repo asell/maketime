@@ -1,6 +1,7 @@
 // app/routes.js
 var mongoose = require('mongoose');
 var _ = require('underscore');
+var autoschedule = require('./get-from-google-cal.js');
 
 module.exports = function(app, passport) {
 
@@ -63,7 +64,7 @@ module.exports = function(app, passport) {
 			res.render('connect-local.ejs', { message: req.flash('loginMessage') });
 		});
 		app.post('/connect/local', passport.authenticate('local-signup', {
-			successRedirect : '/profile',
+			successRedirect : '/',
 			failureRedirect : '/connect/local', 
 			failureFlash : true
 		}));
@@ -106,6 +107,8 @@ app.get('/api/user', isLoggedIn, function(req, res) {
 
 app.put('/api/user', function(req, res) {
 	var user = req.user;
+	var task = autoschedule(req.body).task;
+	console.log(task);
 	user = _.extend(user, req.body);
 	user.save(function(err) {
 		res.jsonp(user);

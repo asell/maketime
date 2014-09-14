@@ -9,7 +9,8 @@ var taskSchema = mongoose.Schema({
 	dataStart: Date,
 	dateEnd: Date,
 	dateActual: Date,
-	type: String
+	type: String,
+	length: Number
 });
 
 var userSchema = mongoose.Schema({
