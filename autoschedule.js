@@ -1,6 +1,7 @@
 /**
  * 
  */
+module.exports = 
 //creates a moment from a date string
 var createMoment = function(dateString){
     return moment(dateString);
