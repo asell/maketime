@@ -1,17 +1,18 @@
-angular.module('TaskNewCtrl', []).controller('TaskNewCtrl', function ($scope, $routeParams, $location, UserData) {
-
-    $scope.save = function () {
-        if(!$scope.user.task){
-            $scope.user.task = [];
+angular.module('TaskNewCtrl', ['ngRoute'])
+.controller('TaskNewCtrl', function ($scope, $routeParams, $location, UserData) {
+  
+  $scope.save = function () {
+        if(!$scope.User.task){
+            $scope.User.task = [];
         }
-        $scope.user.task.push($scope.task);
-        $scope.user.$update(function(){
-            $location.path('/');
-        })
+        $scope.User.task.push($scope.Task);
+        $scope.User.$update(function(){
+	 // $location.path('/');
+	})
     };
 
     $scope.init = function () {
-        $scope.user = UserData.get({userId: $routeParams.id});
+        $scope.User = UserData.get();
     };
 
     $scope.init();

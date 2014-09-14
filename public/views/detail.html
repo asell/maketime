@@ -1,0 +1,10 @@
+<form name="taskForm" method="post">
+  <div class="form-group">
+  <fieldset>
+    <input id="taskTitle" type="text" placeholder="title" class="form-horizontal" ng-model="Task.title">{{Task.title}}
+  <input type="text" ng-model="Task.type">
+    <a name="saveBtn" ng-click="save()">Save</a>
+  </fieldset>
+  </div>
+</form>	
+{{Task}}

@@ -1,1 +1,1 @@
-angular.module('MakeTime', ['ngRoute', 'ngResource', 'ngCookies','appRoutes', 'TaskCtrl']);
+angular.module('MakeTime', ['ngRoute', 'ngResource', 'appRoutes', 'TaskCtrl', 'TaskNewCtrl', 'TaskDeleteCtrl', 'UserData']);

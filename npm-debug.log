@@ -1,253 +1,69 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'nodemon' ]
-2 info using npm@1.4.14
-3 info using node@v0.10.29
-4 verbose cache add [ 'nodemon', null ]
-5 verbose cache add name=undefined spec="nodemon" args=["nodemon",null]
-6 verbose parsed url { protocol: null,
-6 verbose parsed url   slashes: null,
-6 verbose parsed url   auth: null,
-6 verbose parsed url   host: null,
-6 verbose parsed url   port: null,
-6 verbose parsed url   hostname: null,
-6 verbose parsed url   hash: null,
-6 verbose parsed url   search: null,
-6 verbose parsed url   query: null,
-6 verbose parsed url   pathname: 'nodemon',
-6 verbose parsed url   path: 'nodemon',
-6 verbose parsed url   href: 'nodemon' }
-7 silly lockFile 1625b929-nodemon nodemon
-8 verbose lock nodemon /Users/lexiselldorff/.npm/1625b929-nodemon.lock
-9 silly lockFile 1625b929-nodemon nodemon
-10 silly lockFile 1625b929-nodemon nodemon
-11 verbose addNamed [ 'nodemon', '' ]
-12 verbose addNamed [ null, '*' ]
-13 silly lockFile 4f5e51c6-nodemon nodemon@
-14 verbose lock nodemon@ /Users/lexiselldorff/.npm/4f5e51c6-nodemon.lock
-15 silly addNameRange { name: 'nodemon', range: '*', hasData: false }
-16 verbose url raw nodemon
-17 verbose url resolving [ 'https://registry.npmjs.org/', './nodemon' ]
-18 verbose url resolved https://registry.npmjs.org/nodemon
-19 info trying registry request attempt 1 at 09:30:14
-20 http GET https://registry.npmjs.org/nodemon
-21 http 200 https://registry.npmjs.org/nodemon
-22 silly registry.get cb [ 200,
-22 silly registry.get   { date: 'Sat, 13 Sep 2014 13:30:14 GMT',
-22 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-22 silly registry.get     etag: '"13WMI0FPWF7BPB3Y0MN0QQ9SP"',
-22 silly registry.get     'content-type': 'application/json',
-22 silly registry.get     'cache-control': 'max-age=60',
-22 silly registry.get     'content-length': '122459',
-22 silly registry.get     'accept-ranges': 'bytes',
-22 silly registry.get     via: '1.1 varnish',
-22 silly registry.get     age: '295',
-22 silly registry.get     'x-served-by': 'cache-jfk1030-JFK',
-22 silly registry.get     'x-cache': 'HIT',
-22 silly registry.get     'x-cache-hits': '1',
-22 silly registry.get     'x-timer': 'S1410615014.662486,VS0,VE85',
-22 silly registry.get     vary: 'Accept',
-22 silly registry.get     'keep-alive': 'timeout=10, max=50',
-22 silly registry.get     connection: 'Keep-Alive' } ]
-23 silly addNameRange number 2 { name: 'nodemon', range: '*', hasData: true }
-24 silly addNameRange versions [ 'nodemon',
-24 silly addNameRange   [ '0.1.4',
-24 silly addNameRange     '0.1.5',
-24 silly addNameRange     '0.1.6',
-24 silly addNameRange     '0.1.7',
-24 silly addNameRange     '0.1.8',
-24 silly addNameRange     '0.2.0',
-24 silly addNameRange     '0.2.1',
-24 silly addNameRange     '0.2.2',
-24 silly addNameRange     '0.3.0',
-24 silly addNameRange     '0.3.1',
-24 silly addNameRange     '0.3.2',
-24 silly addNameRange     '0.4.0',
-24 silly addNameRange     '0.4.1',
-24 silly addNameRange     '0.5.0',
-24 silly addNameRange     '0.5.1',
-24 silly addNameRange     '0.5.2',
-24 silly addNameRange     '0.5.3',
-24 silly addNameRange     '0.5.4',
-24 silly addNameRange     '0.5.5',
-24 silly addNameRange     '0.5.6',
-24 silly addNameRange     '0.5.7',
-24 silly addNameRange     '0.6.0',
-24 silly addNameRange     '0.6.1',
-24 silly addNameRange     '0.6.2',
-24 silly addNameRange     '0.6.3',
-24 silly addNameRange     '0.6.4',
-24 silly addNameRange     '0.6.5',
-24 silly addNameRange     '0.6.6',
-24 silly addNameRange     '0.6.7',
-24 silly addNameRange     '0.6.8',
-24 silly addNameRange     '0.6.9',
-24 silly addNameRange     '0.6.10',
-24 silly addNameRange     '0.6.11',
-24 silly addNameRange     '0.6.12',
-24 silly addNameRange     '0.6.13',
-24 silly addNameRange     '0.6.14',
-24 silly addNameRange     '0.6.15',
-24 silly addNameRange     '0.6.16',
-24 silly addNameRange     '0.6.17',
-24 silly addNameRange     '0.6.18',
-24 silly addNameRange     '0.6.19',
-24 silly addNameRange     '0.6.20',
-24 silly addNameRange     '0.6.21',
-24 silly addNameRange     '0.6.22',
-24 silly addNameRange     '0.6.23',
-24 silly addNameRange     '0.7.0',
-24 silly addNameRange     '0.7.1',
-24 silly addNameRange     '0.7.2',
-24 silly addNameRange     '0.7.3',
-24 silly addNameRange     '0.7.4',
-24 silly addNameRange     '0.7.5',
-24 silly addNameRange     '0.7.6',
-24 silly addNameRange     '0.7.7',
-24 silly addNameRange     '0.7.8',
-24 silly addNameRange     '0.7.10',
-24 silly addNameRange     '0.9.0',
-24 silly addNameRange     '0.9.1',
-24 silly addNameRange     '0.9.2',
-24 silly addNameRange     '0.9.3',
-24 silly addNameRange     '0.9.5',
-24 silly addNameRange     '0.9.6',
-24 silly addNameRange     '0.9.7',
-24 silly addNameRange     '0.9.10',
-24 silly addNameRange     '0.9.11',
-24 silly addNameRange     '0.9.12',
-24 silly addNameRange     '0.9.14',
-24 silly addNameRange     '0.9.16',
-24 silly addNameRange     '0.9.17',
-24 silly addNameRange     '1.0.0',
-24 silly addNameRange     '1.0.1',
-24 silly addNameRange     '1.0.2',
-24 silly addNameRange     '1.0.2-rc',
-24 silly addNameRange     '0.6.10-a',
-24 silly addNameRange     '1.0.2-rc3',
-24 silly addNameRange     '1.0.2-rc4',
-24 silly addNameRange     '1.0.3',
-24 silly addNameRange     '1.0.4',
-24 silly addNameRange     '1.0.5',
-24 silly addNameRange     '1.0.6',
-24 silly addNameRange     '1.0.7',
-24 silly addNameRange     '1.0.8',
-24 silly addNameRange     '1.0.9',
-24 silly addNameRange     '1.0.10',
-24 silly addNameRange     '1.0.11',
-24 silly addNameRange     '1.0.12',
-24 silly addNameRange     '1.0.13',
-24 silly addNameRange     '1.0.14',
-24 silly addNameRange     '1.0.15',
-24 silly addNameRange     '1.0.16',
-24 silly addNameRange     '1.0.17-rc1',
-24 silly addNameRange     '1.0.17-rc2',
-24 silly addNameRange     '1.0.17',
-24 silly addNameRange     '1.0.18',
-24 silly addNameRange     '1.0.19',
-24 silly addNameRange     '1.0.20',
-24 silly addNameRange     '1.1.0-alpha',
-24 silly addNameRange     '1.1.0',
-24 silly addNameRange     '1.1.1',
-24 silly addNameRange     '1.2.0',
-24 silly addNameRange     '1.2.1' ] ]
-25 verbose addNamed [ 'nodemon', '1.2.1' ]
-26 verbose addNamed [ '1.2.1', '1.2.1' ]
-27 silly lockFile 891e98f0-nodemon-1-2-1 nodemon@1.2.1
-28 verbose lock nodemon@1.2.1 /Users/lexiselldorff/.npm/891e98f0-nodemon-1-2-1.lock
-29 silly lockFile 85afaeac-js-org-nodemon-nodemon-1-2-1-tgz https://registry.npmjs.org/nodemon/-/nodemon-1.2.1.tgz
-30 verbose lock https://registry.npmjs.org/nodemon/-/nodemon-1.2.1.tgz /Users/lexiselldorff/.npm/85afaeac-js-org-nodemon-nodemon-1-2-1-tgz.lock
-31 verbose addRemoteTarball [ 'https://registry.npmjs.org/nodemon/-/nodemon-1.2.1.tgz',
-31 verbose addRemoteTarball   '02a288045652e92350e7d752a8054472ed2c4824' ]
-32 info retry fetch attempt 1 at 09:30:14
-33 verbose fetch to= /var/folders/rf/rpfwg_g91kv7052_xcs7kvz80000gn/T/npm-2174-Lk7mkIvj/registry.npmjs.org/nodemon/-/nodemon-1.2.1.tgz
-34 http GET https://registry.npmjs.org/nodemon/-/nodemon-1.2.1.tgz
-35 http 200 https://registry.npmjs.org/nodemon/-/nodemon-1.2.1.tgz
-36 silly lockFile 85afaeac-js-org-nodemon-nodemon-1-2-1-tgz https://registry.npmjs.org/nodemon/-/nodemon-1.2.1.tgz
-37 silly lockFile 85afaeac-js-org-nodemon-nodemon-1-2-1-tgz https://registry.npmjs.org/nodemon/-/nodemon-1.2.1.tgz
-38 silly lockFile 891e98f0-nodemon-1-2-1 nodemon@1.2.1
-39 silly lockFile 891e98f0-nodemon-1-2-1 nodemon@1.2.1
-40 silly lockFile 4f5e51c6-nodemon nodemon@
-41 silly lockFile 4f5e51c6-nodemon nodemon@
-42 silly resolved [ { name: 'nodemon',
-42 silly resolved     homepage: 'http://nodemon.io',
-42 silly resolved     author: { name: 'Remy Sharp', url: 'http://github.com/remy' },
-42 silly resolved     bin: { nodemon: './bin/nodemon.js' },
-42 silly resolved     engines: { node: '>=0.8' },
-42 silly resolved     repository: { type: 'git', url: 'http://github.com/remy/nodemon.git' },
-42 silly resolved     description: 'Simple monitor script for use during development of a node.js app.',
-42 silly resolved     keywords:
-42 silly resolved      [ 'monitor',
-42 silly resolved        'development',
-42 silly resolved        'restart',
-42 silly resolved        'autoload',
-42 silly resolved        'reload',
-42 silly resolved        'terminal' ],
-42 silly resolved     version: '1.2.1',
-42 silly resolved     preferGlobal: 'true',
-42 silly resolved     licenses: [ [Object] ],
-42 silly resolved     main: './lib/nodemon',
-42 silly resolved     scripts:
-42 silly resolved      { coverage: 'istanbul cover _mocha -- --timeout 30000 --ui bdd --reporter list test/**/*.test.js',
-42 silly resolved        test: 'node_modules/mocha/bin/_mocha --timeout 30000 --ui bdd test/**/*.test.js',
-42 silly resolved        web: 'node web' },
-42 silly resolved     devDependencies:
-42 silly resolved      { connect: '~2.19.1',
-42 silly resolved        mocha: '~1.20.0',
-42 silly resolved        should: '~4.0.0',
-42 silly resolved        istanbul: '~0.2.10',
-42 silly resolved        touch: '~0.0.3',
-42 silly resolved        'coffee-script': '~1.7.1' },
-42 silly resolved     dependencies:
-42 silly resolved      { 'update-notifier': '~0.1.8',
-42 silly resolved        minimatch: '~0.3.0',
-42 silly resolved        'ps-tree': '~0.0.3' },
-42 silly resolved     bugs: { url: 'https://github.com/remy/nodemon/issues' },
-42 silly resolved     _id: 'nodemon@1.2.1',
-42 silly resolved     dist:
-42 silly resolved      { shasum: '02a288045652e92350e7d752a8054472ed2c4824',
-42 silly resolved        tarball: 'http://registry.npmjs.org/nodemon/-/nodemon-1.2.1.tgz' },
-42 silly resolved     _from: 'nodemon@',
-42 silly resolved     _npmVersion: '1.3.24',
-42 silly resolved     _npmUser: { name: 'remy', email: 'remy@remysharp.com' },
-42 silly resolved     maintainers: [ [Object] ],
-42 silly resolved     directories: {},
-42 silly resolved     _shasum: '02a288045652e92350e7d752a8054472ed2c4824',
-42 silly resolved     _resolved: 'https://registry.npmjs.org/nodemon/-/nodemon-1.2.1.tgz' } ]
-43 info install nodemon@1.2.1 into /usr/local/lib
-44 info installOne nodemon@1.2.1
-45 info /usr/local/lib/node_modules/nodemon unbuild
-46 verbose tar unpack /Users/lexiselldorff/.npm/nodemon/1.2.1/package.tgz
-47 silly lockFile 15c6d46c-r-local-lib-node-modules-nodemon tar:///usr/local/lib/node_modules/nodemon
-48 verbose lock tar:///usr/local/lib/node_modules/nodemon /Users/lexiselldorff/.npm/15c6d46c-r-local-lib-node-modules-nodemon.lock
-49 silly lockFile 14b444c5-ff-npm-nodemon-1-2-1-package-tgz tar:///Users/lexiselldorff/.npm/nodemon/1.2.1/package.tgz
-50 verbose lock tar:///Users/lexiselldorff/.npm/nodemon/1.2.1/package.tgz /Users/lexiselldorff/.npm/14b444c5-ff-npm-nodemon-1-2-1-package-tgz.lock
-51 silly gunzTarPerm modes [ '755', '644' ]
-52 error Error: EACCES, mkdir '/usr/local/lib/node_modules/nodemon'
-52 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/nodemon']
-52 error   errno: 3,
-52 error   code: 'EACCES',
-52 error   path: '/usr/local/lib/node_modules/nodemon',
-52 error   fstream_type: 'Directory',
-52 error   fstream_path: '/usr/local/lib/node_modules/nodemon',
-52 error   fstream_class: 'DirWriter',
-52 error   fstream_stack:
-52 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
-52 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53',
-52 error      'Object.oncomplete (fs.js:107:15)' ] }
-53 error Please try running this command again as root/Administrator.
-54 error System Darwin 13.3.0
-55 error command "node" "/usr/local/bin/npm" "install" "-g" "nodemon"
-56 error cwd /Users/lexiselldorff/Documents/PennApps2014/MyCal
-57 error node -v v0.10.29
-58 error npm -v 1.4.14
-59 error path /usr/local/lib/node_modules/nodemon
-60 error fstream_path /usr/local/lib/node_modules/nodemon
-61 error fstream_type Directory
-62 error fstream_class DirWriter
-63 error code EACCES
-64 error errno 3
-65 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/nodemon'
-66 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
-66 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53
-66 error fstream_stack Object.oncomplete (fs.js:107:15)
-67 verbose exit [ 3, true ]
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'aysnc' ]
+2 info using npm@1.3.24
+3 info using node@v0.10.25
+4 verbose node symlink /usr/bin/node
+5 warn package.json node-authentication@ No description
+6 warn package.json node-authentication@ No repository field.
+7 warn package.json node-authentication@ No README data
+8 warn package.json passport-local@0.1.6 No README data
+9 verbose readDependencies using package.json deps
+10 verbose cache add [ 'aysnc', null ]
+11 verbose cache add name=undefined spec="aysnc" args=["aysnc",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'aysnc',
+12 verbose parsed url   path: 'aysnc',
+12 verbose parsed url   href: 'aysnc' }
+13 silly lockFile ef018afb-aysnc aysnc
+14 verbose lock aysnc /home/funnyjk/.npm/ef018afb-aysnc.lock
+15 silly lockFile ef018afb-aysnc aysnc
+16 silly lockFile ef018afb-aysnc aysnc
+17 verbose addNamed [ 'aysnc', '' ]
+18 verbose addNamed [ null, '*' ]
+19 silly lockFile 709ef842-aysnc aysnc@
+20 verbose lock aysnc@ /home/funnyjk/.npm/709ef842-aysnc.lock
+21 silly addNameRange { name: 'aysnc', range: '*', hasData: false }
+22 verbose url raw aysnc
+23 verbose url resolving [ 'https://registry.npmjs.org/', './aysnc' ]
+24 verbose url resolved https://registry.npmjs.org/aysnc
+25 info trying registry request attempt 1 at 22:07:26
+26 http GET https://registry.npmjs.org/aysnc
+27 http 404 https://registry.npmjs.org/aysnc
+28 silly registry.get cb [ 404,
+28 silly registry.get   { date: 'Sun, 14 Sep 2014 02:07:27 GMT',
+28 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+28 silly registry.get     'content-type': 'application/json',
+28 silly registry.get     'cache-control': 'max-age=0',
+28 silly registry.get     'content-length': '52',
+28 silly registry.get     'accept-ranges': 'bytes',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     age: '0',
+28 silly registry.get     'x-served-by': 'cache-iad2131-IAD',
+28 silly registry.get     'x-cache': 'MISS',
+28 silly registry.get     'x-cache-hits': '0',
+28 silly registry.get     'x-timer': 'S1410660446.983451,VS0,VE354',
+28 silly registry.get     'keep-alive': 'timeout=10, max=50',
+28 silly registry.get     connection: 'Keep-Alive' } ]
+29 silly lockFile 709ef842-aysnc aysnc@
+30 silly lockFile 709ef842-aysnc aysnc@
+31 error 404 'aysnc' is not in the npm registry.
+31 error 404 You should bug the author to publish it
+31 error 404 It was specified as a dependency of 'node-authentication'
+31 error 404
+31 error 404 Note that you can also install from a
+31 error 404 tarball, folder, or http url, or git url.
+32 error System Linux 3.2.0-58-generic
+33 error command "/usr/bin/node" "/usr/bin/npm" "install" "aysnc"
+34 error cwd /home/funnyjk/git/maketime
+35 error node -v v0.10.25
+36 error npm -v 1.3.24
+37 error code E404
+38 verbose exit [ 1, true ]

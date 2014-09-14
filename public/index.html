@@ -5,7 +5,7 @@
   <title>MakeTi.me</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <!-- <base href="/"> -->
+<!--  <base href="/"> -->
   
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -29,6 +29,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="/">Home</a></li>
             <li><a href="#tasks">Tasks</a></li>
+            <li><a href="#tasks-new">TaskNew</a></li>
             <li><a href="contact">Contact</a></li>
           </ul>
 		  <ul class="nav navbar-nav pull-right" ng-if="!currentUser">
@@ -47,11 +48,14 @@
 	<script src="libs/angular/angular.js"></script>
 	<script src="libs/angular-route/angular-route.js"></script>
 	<script src="libs/angular-resource/angular-resource.js"></script>
-	<script src="libs/angular-resource/angular-cookies.js"></script>
 	
 	<script src="scripts/appRoutes.js"></script>
 	<script src="scripts/app.js"></script>
-	
+	<script src="scripts/services/UserData.js"></script>
+
 	<script src="scripts/controllers/TaskCtrl.js"></script>
+	<script src="scripts/controllers/TaskNewCtrl.js"></script>
+	<script src="scripts/controllers/TaskDeleteCtrl.js"></script>
+
 </body>
 </html>
