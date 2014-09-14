@@ -1,28 +1,40 @@
 /**
  * 
  */
-
-var sortFunc = function(firstEvent, secondEvent){
-	var x = moment(firstEvent.start.dateTime);
-    var y = moment(secondEvent.start.dateTime);
-    return (x.diff(y, 'minutes') < 0 ? -1 : x.diff(y, 'minutes') == 0 ? 0 : 1)
+//creates a moment from a date string
+var createMoment = function(dateString){
+	return moment(dateString, 'YYYY-MM-DD HH:mm');
 }
 
-var f = function(eList){
-	var ret = [];
-	for (e in eList){
-		if (eList[e].start.dateTime){
-			ret.push(eList[e]);
-		}
+//returns -1 if x is before y in minutes, 0 if same, 1 if after
+var sortOnStartDate = function(firstEvent, secondEvent){
+	var firstDateTime = firstEvent.start.dateTime;
+	var secondDateTime = secondEvent.start.dateTime;
+	if(!firstDateTime){
+		firstDateTime = firstEvent.start.date;
 	}
-	return ret;
+	if(!secondDateTime){
+		secondDateTime = secondEvent.start.date;
+	}
+	var x = createMoment(firstDateTime);
+    var y = createMoment(secondDateTime);
+    return (x.isBefore(y, 'minute') ? -1 : x.isSame(y, 'minute') ? 0 : 1)
 }
 
-//TODO: compare dates using moment compares inline
+//returns a list of all calendar events from google overlapping at all with startBy-endBy range
 var filterGoogleEvents = function(startByDateTime, endByDateTime, eList){
 	var filteredEventList = [];
+	var startBy = createMoment(startByDateTime);
+	var endBy = createMoment(endByDateTime)
 	for (event in eList){
-		if (((moment(eList[event].start.dateTime).diff(moment(startByDateTime), 'minutes') >= 0) && (moment(eList[event].start.dateTime).diff(moment(endByDateTime), 'minutes') <= 0)) || ((moment(eList[event].end.dateTime).diff(moment(startByDateTime), 'minutes') >= 0) && (moment(eList[event].end.dateTime).diff(moment(endByTime), 'minutes') <= 0))){
+		var curEventStart = createMoment(eList[event].start.dateTime);
+		var curEventEnd = createMoment(eList[event].end.dateTime);
+		
+		//does currentEvent overlap with the range at all
+		//if so, add it to the list of events in the range
+		if (((curEventStart.isAfter(startBy, 'minute') || curEventStart.isSame(startBy, 'minute')) && (curEventStart.isBefore(endBy, 'minute'))) 
+			  || ((curEventEnd.isAfter(startBy, 'minute') || curEventEnd.isSame(startBy, 'minute')) && (curEventEnd.isBefore(endBy, 'minute'))))
+		{
 			filteredEventList.push(eList[event]);
 		}
 	}
@@ -34,9 +46,17 @@ var filterGoogleEvents = function(startByDateTime, endByDateTime, eList){
 //TODO: finish implementing, this is not necessary, more important to finish scheduleEventFirstAvailable
 //to finish, all we need to do is insert moment compares
 //calculates all available slots to schedule the task
-var calculateAvailableSlots = function(ourEvent, filteredGoogleCalEventList){
+//filteredGoogleCalEventList must be sorted by startTime ascending, e.g. earliest events first
+/*
+ * ourTask will be JSON object for 
+ */
+var calculateAvailableSlots = function(ourTask, filteredGoogleCalEventList){
 	var prevEvent = filteredGoogleCalEventList[0];
-	if ((filteredGoogleCalEventList.length <= 0) || ((prevEvent.start.dateTime >= ourEvent.startBy) && ((prevEvent.start.dateTime - ourEvent.startBy) >= ourEvent.duration))){
+	if (!filteredGoogleCalEventList || !filteredGoogleCalEventList.length){
+		ourEvent.start
+	}
+	//if we can fit between furthest in future of (now, ourEvent.startBy) and the first event in our eligible range
+	if ((!filteredGoogleCalEventList.length) || ((prevEvent.start.dateTime >= ourEvent.startBy) && ((prevEvent.start.dateTime - ourEvent.startBy) >= ourEvent.duration))){
 		event = {"kind": "calendar#event", "id": ourEvent.id, "start": ourEvent.startBy, "end": ourEvent.startBy + ourEvent.duration};
 		return event;
 	}
@@ -44,7 +64,8 @@ var calculateAvailableSlots = function(ourEvent, filteredGoogleCalEventList){
 
 //returns the event with all fields properly filled out, throws error if can't create
 //schedules in earliest available slot after the startBy dateTime
-var scheduleEventFirstAvailable = function(ourEvent, filteredGoogleCalEventList){
+//filtered and sorted list
+var scheduleEventFirstAvailable = function(ourEvent, filteredSortedGoogleCalEventList){
 	var prevEvent = filteredGoogleCalEventList[0];
 	var event;
 	//if we can fit before first item in range, or if the list is empty
